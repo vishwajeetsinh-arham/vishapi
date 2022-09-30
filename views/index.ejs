@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+    <!-- <h1>Homepage</h1>
+    <a href="https://<%=shopname%>" ><%=shopname%></a>
+    <a href="/createproduct">Create A new Product</a> -->
+
+    <table>
+        <tr>
+            <td>Title</td>
+        </tr>
+        <%for(let product of products){%>
+        <tr class="product">
+            <td class="title" ><%=product.title%></td>
+            <td><%=product.vendor%></td>
+            <td><%=product.id%></td>
+            <td>
+                <% for(let image of product.images){ %>
+                    <img src="<%=image.src%>" width="50px" alt="">
+                    <% } %>
+            </td>
+        </tr>
+        <tr>
+        </tr>
+        <% } %>
+
+    </table>
+</body>
+</html>
